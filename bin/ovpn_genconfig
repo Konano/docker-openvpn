@@ -147,7 +147,7 @@ OVPN_CIPHER=''
 OVPN_CLIENT_TO_CLIENT=''
 OVPN_CN=''
 OVPN_COMP_LZO=0
-OVPN_DEFROUTE=1
+OVPN_DEFROUTE=0
 OVPN_DEVICE="tun"
 OVPN_DEVICEN=0
 OVPN_DISABLE_PUSH_BLOCK_DNS=0
@@ -319,6 +319,8 @@ fi
 
 cat > "$conf" <<EOF
 server $(getroute $OVPN_SERVER)
+# server-ipv6 f0c0:ffee:????::/64
+
 verb 3
 key $EASYRSA_PKI/private/${OVPN_CN}.key
 ca $EASYRSA_PKI/ca.crt
