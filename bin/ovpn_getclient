@@ -37,6 +37,13 @@ nobind
 dev $OVPN_DEVICE
 remote-cert-tls server
 
+verb 3
+
+# auth-nocache
+# persist-key
+# persist-tun
+# resolv-retry infinite
+
 cipher AES-256-GCM
 # data-ciphers AES-256-GCM
 
